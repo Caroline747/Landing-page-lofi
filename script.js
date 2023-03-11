@@ -1,3 +1,4 @@
+//MUSICA PLAYER
 var audElem= document.getElementsByTagName('audio')[0].getAttribute('id');
 $(".card").click(function(){
    song(Lofi);
@@ -7,12 +8,11 @@ var Lofi = document.getElementById(audElem);
    $(".teethBox").addClass("playing")
    $(".tape-ribbon").addClass("play")
    $(".tape-ribbon-two").addClass("play-two")
-//start playing at 0
+
    a.play();
    }
 
-// BOTAO DARK
-
+// BOTÃO DARK
 function toggle_light_mode() {
    var app = document.getElementsByTagName("BODY")[0];
    if (localStorage.lightMode == "dark") {
@@ -35,3 +35,12 @@ window.addEventListener(
    },
    false
 );
+
+//PRELOADER
+//<![CDATA[
+    $(window).on('load', function () {
+        $('#preloader .inner').fadeOut();
+        $('#preloader').delay(100).fadeOut('slow'); 
+        $('body').delay(100).css({'overflow': 'visible'});
+    })
+    //]]>
